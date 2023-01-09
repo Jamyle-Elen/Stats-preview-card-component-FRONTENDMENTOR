@@ -12,8 +12,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 120px; /*GAGA*/
     font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    width: 100vw;
 }
 
 .all {
@@ -42,7 +43,7 @@ body {
 .more {
     color: hsla(0, 0%, 100%, 0.75);
     margin-bottom: 50px;
-    margin-right: 30px;
+    /*margin-right: 30px;*/
     font-size: 13px;
 }
 
@@ -64,15 +65,93 @@ body {
     margin-bottom: 6px;
 }
 
-.all img {
-    filter: hue-rotate(217deg); /*error*/
-}
-
 .attribution {
     color: rgb(107, 102, 102);
+    margin-top: 12px;
 }
 
 .attribution a {
     color: #fff;
     text-decoration: none;
+}
+
+@media screen and (min-width: 1100px) {
+    .all .mobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .all .desktop {
+        display: none;
+    }
+
+    .all {
+        display: flex;
+        flex-direction: column;
+        height: 850px;
+        width: 450px;
+    }
+
+    .more {
+        text-align: center;
+    }
+
+    .subdados {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        margin-bottom: 40px;
+    }
+
+    .cnt1 {
+        padding: 50px;
+        width: 450px;
+    }
+
+    .cnt1 .title {
+        text-align: center;
+    }
+
+    .dados {
+        margin-right: 0px;
+    }
+
+    .dadosM {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    .mobile {
+        width: 350px;
+    }
+
+    .all {
+        height: 770px;
+        width: 350px;
+    }
+
+    .cnt1 .title {
+        font-size: 20px;
+    }
+
+    .cnt1 {
+        width: 350px;
+    }
+
+    .dados {
+        margin-right: 0px;
+    }
+
+    .dadosM {
+        text-align: center;
+    }
+
+    .attribution {
+        font-size: 12px;
+    }
 }
